@@ -2,10 +2,12 @@ public class Controller implements ControllerInterface {
   private ModelInterface modelInterface;
   private ViewInterface viewInterface;
   
+  @Override
   public void setViewInterface(ViewInterface paramViewInterface) {
     this.viewInterface = paramViewInterface;
   }
   
+  @Override
   public void setModelInterface(ModelInterface paramModelInterface) {
     this.modelInterface = paramModelInterface;
   }

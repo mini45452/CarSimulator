@@ -19,11 +19,13 @@ public class View implements ViewInterface {
     }
   }
   
-  void setModel(ModelInterface paramModelInterface) {
+  @Override
+  public void setModel(ModelInterface paramModelInterface) {
     this.modelInterface = paramModelInterface;
   }
   
-  void setController(ControllerInterface paramControllerInterface) {
+  @Override
+  public void setController(ControllerInterface paramControllerInterface) {
     this.controllerInterface = paramControllerInterface;
   }
 
