@@ -1,15 +1,9 @@
-
-import java.awt.event.KeyEvent;
-import java.awt.event.KeyListener;
-import javax.swing.JFrame;
-import javax.swing.JRootPane;
-
 public class View implements ViewInterface {
 
   private ModelInterface modelInterface;
   private ControllerInterface controllerInterface;
   final int NEW_LINE_FOR_CLRSCR = 10;
-  
+
   View(ModelInterface paramModelInterface, ControllerInterface paramControllerInterface) {
     setModel(paramModelInterface);
     setController(paramControllerInterface);
@@ -20,7 +14,6 @@ public class View implements ViewInterface {
       System.out.println();
     }
   }
-  
 
   @Override
   public void setModel(ModelInterface paramModelInterface) {

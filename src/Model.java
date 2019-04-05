@@ -1,11 +1,13 @@
+
 import java.util.ArrayList;
 
 public class Model implements ModelInterface {
+
   private int speed;
   private int dir;
   private ArrayList<ViewInterface> observers = new ArrayList<ViewInterface>();
   final int MAX_SPEED = 120;
-  
+
   @Override
   public int getSpeed() {
     return speed;
@@ -20,7 +22,7 @@ public class Model implements ModelInterface {
   public int getDir() {
     return dir;
   }
-  
+
   @Override
   public char getDirCharValue() {
     if (dir == 0) {
@@ -44,7 +46,7 @@ public class Model implements ModelInterface {
   public int getMaxSpeed() {
     return MAX_SPEED;
   }
-  
+
   @Override
   public void addObserver(ViewInterface paramViewInterface) {
     observers.add(paramViewInterface);
