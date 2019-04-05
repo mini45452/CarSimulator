@@ -5,10 +5,11 @@
         <group>
             <file>file:/C:/Users/user/Documents/NetBeansProjects/Project-1/CarSimulator/src/ModelInterface.java</file>
             <file>file:/C:/Users/user/Documents/NetBeansProjects/Project-1/CarSimulator/src/ViewInterface.java</file>
+            <file>file:/C:/Users/user/Documents/NetBeansProjects/Project-1/CarSimulator/src/Main.java</file>
             <file>file:/C:/Users/user/Documents/NetBeansProjects/Project-1/CarSimulator/src/ControllerInterface.java</file>
-            <file>file:/C:/Users/user/Documents/NetBeansProjects/Project-1/CarSimulator/src/Controller.java</file>
-            <file>file:/C:/Users/user/Documents/NetBeansProjects/Project-1/CarSimulator/src/Model.java</file>
+            <file>file:/C:/Users/user/Documents/NetBeansProjects/Project-1/CarSimulator/src/RawConsoleInput.java</file>
             <file>file:/C:/Users/user/Documents/NetBeansProjects/Project-1/CarSimulator/src/View.java</file>
+            <file>file:/C:/Users/user/Documents/NetBeansProjects/Project-1/CarSimulator/src/Model.java</file>
         </group>
     </open-files>
 </project-private>

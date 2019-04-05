@@ -1,29 +1,25 @@
-import java.awt.*;
-import java.io.IOException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-
 public class View implements ViewInterface {
+
   private ModelInterface modelInterface;
   private ControllerInterface controllerInterface;
-  final int NEW_LINE_FOR_CLRSCR = 15;
-  
+  final int NEW_LINE_FOR_CLRSCR = 10;
+
   View(ModelInterface paramModelInterface, ControllerInterface paramControllerInterface) {
     setModel(paramModelInterface);
     setController(paramControllerInterface);
   }
-  
+
   void clearScreen() {
     for (int i = 0; i < NEW_LINE_FOR_CLRSCR; i++) {
       System.out.println();
     }
   }
-  
+
   @Override
   public void setModel(ModelInterface paramModelInterface) {
     this.modelInterface = paramModelInterface;
   }
-  
+
   @Override
   public void setController(ControllerInterface paramControllerInterface) {
     this.controllerInterface = paramControllerInterface;
@@ -34,7 +30,7 @@ public class View implements ViewInterface {
     this.modelInterface = paramModel;
     displayUserInterface();
   }
-  
+
   @Override
   public void displayUserInterface() {
     // display UI based on model
@@ -43,29 +39,25 @@ public class View implements ViewInterface {
     System.out.println("Direction: " + modelInterface.getDirCharValue());
     System.out.println("Press 'h' to see help");
     while (true) {
-      try {
-        char q = (char) System.in.read();
-        if (q == 'w'){
-          keyIncrementSpeedPressed();
-        }
-        if (q == 's') {
-          keyDecrementSpeedPressed();
-        }
-        if (q == 'a') {
-          keyTurnLeftPressed();
-        }
-        if (q == 'd') {
-          keyTurnRightPressed();
-        }
-        if (q == 'q') {
-          System.exit(0);
-        }
-      } catch (IOException ex) {
-        Logger.getLogger(View.class.getName()).log(Level.SEVERE, null, ex);
+      char q = (char) Getch.getch();
+      if (q == 'w') {
+        keyIncrementSpeedPressed();
+      }
+      if (q == 's') {
+        keyDecrementSpeedPressed();
+      }
+      if (q == 'a') {
+        keyTurnLeftPressed();
+      }
+      if (q == 'd') {
+        keyTurnRightPressed();
+      }
+      if (q == 'q') {
+        System.exit(0);
       }
     }
   }
-  
+
   @Override
   public void displayHelp() {
     clearScreen();
